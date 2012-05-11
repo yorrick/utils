@@ -46,6 +46,11 @@ alias cleanpyc='find . -type f -name "*.pyc" -exec rm -f {} \;'
 # restaure sessions by tab for iterm2
 export HISTFILE=~/.bash-history-${ITERM_SESSION_ID}
 
+
+# ssh completion
+complete -W "$(echo `cat ~/.ssh/known_hosts | cut -f 1 -d ' ' | sed -e s/,.*//g | uniq | grep -v "\["`;)" ssh
+
+
 # Git completion
 source ~/.git-completion.bash
 
