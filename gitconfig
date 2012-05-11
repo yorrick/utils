@@ -1,0 +1,22 @@
+[user]
+	name = Yorrick Jansen
+	email = yorrick.jansen@gmail.com
+[core]
+	excludesfile = /Users/yorrick/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[alias]
+	st = status
+	br = branch
+	ch = checkout
+	co = commit
+	fe = fetch
+	unstage = reset HEAD
+	plog = log --pretty=oneline
+	br = branch
+	br = branch -v
+	last = log -1 HEAD
