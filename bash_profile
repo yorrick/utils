@@ -48,7 +48,15 @@ export HISTFILE=~/.bash-history-${ITERM_SESSION_ID}
 
 
 # ssh completion
-complete -W "$(echo `cat ~/.ssh/known_hosts | cut -f 1 -d ' ' | sed -e s/,.*//g | uniq | grep -v "\["`;)" ssh
+_complete_ssh_hosts ()
+{
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    comp_ssh_hosts=`cat ~/.ssh/config  | grep "^Host " | awk '{print $2}'`
+    COMPREPLY=( $(compgen -W "${comp_ssh_hosts}" -- $cur))
+    return 0
+}
+complete -F _complete_ssh_hosts ssh
 
 
 # Git completion
