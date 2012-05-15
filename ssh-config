@@ -1,0 +1,91 @@
+Host github.com
+	IdentityFile ~/.ssh/id_rsa_github
+    User git   
+
+
+Host vserver.auto
+	IdentityFile ~/.ssh/id_rsa
+
+Host mtlserverolio
+    Port 42022
+    Hostname mtlserverolio.dyndns.org
+    User yorrick
+    LocalForward 5433 localhost:5432
+    LocalForward 6667 localhost:6667
+    LocalForward 8001 localhost:80
+    ServerAliveInterval 60
+
+Host mtlserveroliohg
+    Port 42022
+    Hostname mtlserverolio.dyndns.org
+    User www-data
+    IdentityFile ~/.ssh/id_rsa 
+    ServerAliveInterval 60
+
+Host lavalservers
+   Hostname 192.168.99.7
+   LocalForward 6435 192.168.0.72:5432
+
+Host tools1
+   Port 2323
+   Hostname tools1.mtlevolio.com
+   User yorrick
+   ServerAliveInterval 60
+   IdentityFile ~/.ssh/id_rsa_cloud
+
+Host cloudservers
+   Port 2323
+   Hostname tools1.mtlevolio.com
+   User yorrick
+   ServerAliveInterval 60
+   IdentityFile ~/.ssh/id_rsa_cloud
+   LocalForward 5436 10.38.17.137:5432
+   LocalForward 5438 10.38.17.136:5434
+   LocalForward 50133 10.38.17.133:2323
+   LocalForward 50134 10.38.17.134:2323
+   LocalForward 50135 10.38.17.135:2323
+   LocalForward 50136 10.38.17.136:2323
+   LocalForward 50137 10.38.17.137:2323
+   LocalForward 50138 10.38.17.138:2323
+
+Host appdealer1
+   Port 50133
+   Hostname localhost
+   User yorrick
+   ServerAliveInterval 60
+   IdentityFile ~/.ssh/id_rsa_cloud
+
+Host appdealer2
+   Port 50134
+   Hostname localhost
+   User yorrick
+   ServerAliveInterval 60
+   IdentityFile ~/.ssh/id_rsa_cloud
+
+Host stagappdealer1
+   Port 50135
+   Hostname localhost
+   User yorrick
+   ServerAliveInterval 60
+   IdentityFile ~/.ssh/id_rsa_cloud
+
+Host dblegacy1
+   Port 50136
+   Hostname localhost
+   User yorrick
+   ServerAliveInterval 60
+   IdentityFile ~/.ssh/id_rsa_cloud
+
+Host dbmaster1
+   Port 50137
+   Hostname localhost
+   User yorrick
+   ServerAliveInterval 60
+   IdentityFile ~/.ssh/id_rsa_cloud
+
+Host cachedealer1
+   Port 50138
+   Hostname localhost
+   User yorrick
+   ServerAliveInterval 60
+   IdentityFile ~/.ssh/id_rsa_cloud
