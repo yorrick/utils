@@ -58,6 +58,10 @@ _complete_ssh_hosts ()
 }
 complete -F _complete_ssh_hosts ssh
 
+# Bash completion 
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
 
 # Git completion
 source ~/.git-completion.bash
