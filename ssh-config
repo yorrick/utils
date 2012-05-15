@@ -40,6 +40,7 @@ Host cloudservers
    ServerAliveInterval 60
    IdentityFile ~/.ssh/id_rsa_cloud
    LocalForward 5436 10.38.17.137:5432
+   LocalForward 5437 10.38.17.135:5432
    LocalForward 5438 10.38.17.136:5434
    LocalForward 50133 10.38.17.133:2323
    LocalForward 50134 10.38.17.134:2323
