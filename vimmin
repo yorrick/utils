@@ -1,0 +1,177 @@
+" To use Vundle:
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Main bundles
+Bundle 'gmarik/vundle'
+" Bundle 'minibufexpl.vim'
+" Bundle 'fholgado/minibufexpl.vim
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'sienna'
+Bundle 'Wombat'
+
+" Major shortcut change
+let mapleader=","
+nnoremap ; :
+
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+set nobackup		" do not keep a backup file, use versions instead
+set history=1000	" keep 50 lines of command line history
+set undolevels=1000
+set ruler		" show the cursor position all the time
+set showcmd		" display incomplete commands
+set number
+set wildignore=*.swp,*.bak,*.pyc,*.class
+
+" Reasonable Default Editing
+set nowrap
+set expandtab
+set autoindent
+set copyindent
+set tabstop=4		" a tab is four spaces
+"set softtabstop=4
+set shiftwidth=4
+set shiftround
+set textwidth=78
+
+" Search
+set ignorecase
+set smartcase
+set incsearch		" do incremental searching
+
+" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
+" so that you can undo CTRL-U after inserting a line break.
+" inoremap <C-U> <C-G>u<C-U>
+
+" In many terminal emulators the mouse works just fine, thus enable it.
+if has('mouse')
+  set mouse=a
+endif
+
+" Switch syntax highlighting on, when the terminal has colors
+" Also switch on highlighting the last used search pattern.
+if &t_Co > 2 || has("gui_running")
+  syntax on
+  set hlsearch
+  colorscheme wombat
+  "colorscheme sienna
+"  hi Statement guifg=RoyalBlue
+  "hi Normal guibg=Gray95
+endif
+
+if !has("gui_running")
+  colorscheme wombat
+endif
+
+" Only do this part when compiled with support for autocommands.
+if has("autocmd")
+
+  " Enable file type detection.
+  " Use the default filetype settings, so that mail gets 'tw' set to 72,
+  " 'cindent' is on in C files, etc.
+  " Also load indent files, to automatically do language-dependent indenting.
+  filetype plugin indent on
+  set ofu=syntaxcomplete#Complete
+
+  " Put these in an autocmd group, so that we can delete them easily.
+  augroup vimrcEx
+    au!
+
+
+
+    " When editing a file, always jump to the last known cursor position.
+    " Don't do it when the position is invalid or when inside an event handler
+    " (happens when dropping a file on gvim).
+    " Also don't do it when the mark is in the first line, that is the default
+    " position when opening a file.
+    autocmd BufReadPost *
+          \ if line("'\"") > 1 && line("'\"") <= line("$") |
+          \   exe "normal! g`\"" |
+          \ endif
+
+    " For all text files set 'textwidth' to 78 characters.
+    autocmd FileType text setlocal textwidth=78
+
+    " For Python editing
+    autocmd FileType python set tabstop=4
+    autocmd FileType python set softtabstop=4
+    autocmd FileType python set shiftwidth=4
+    autocmd FileType python set textwidth=79
+
+    " For HTML editing
+    autocmd FileType html set tabstop=4
+    autocmd FileType html set shiftwidth=4
+    autocmd FileType html set textwidth=120
+    autocmd FileType html set expandtab
+
+  augroup END
+
+else
+
+  set autoindent		" always set autoindenting on
+
+endif " has("autocmd")
+
+
+
+" Windows Size
+"if has("gui_running")
+"  set lines=75 columns=300
+"endif
+
+" Get rid of toolbar
+set guioptions-=T
+
+" Don't complain if a dirty buffer is not saved, just hide it behind other
+" buffers.
+set hidden
+
+" Completion Settings
+set completeopt=longest,menuone,preview
+
+
+" Text editing
+nmap <c-s> :w<CR>
+imap <c-s> <Esc>:w<CR>a
+" command W w !sudo tee % > /dev/null
+map <C-S-c> "+y
+vmap Q gq
+nmap Q gqap
+set pastetoggle=<F3>
+" vmap W g<C-g>
+" set iskeyword-=_
+nmap <Leader>s :%s/\s\+$//<CR>
+
+" Vim
+nmap <Leader>v :e $MYVIMRC<CR>
+nmap <Leader>l :so $MYVIMRC<CR>
+nmap <Leader>b :bd<CR>
+
+" Other
+nnoremap <Leader>c :set cursorline!<CR>
+nmap <silent> <Leader>/ :nohlsearch<CR>
+
+" Line Highlight Settings
+hi CursorLine cterm=NONE ctermbg=darkgreen ctermfg=white guibg=darkgreen guifg=white
+
+" PLUGIN CONFIG
+
+" NERD Commenter Settings
+map <F2> <plug>NERDCommenterToggle
+
+" Buffer Explorer Settings
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
+
+" Select region
+noremap % v%
+
+" nmap <Up> :bp<CR>
+" nmap <Down> :bn<CR>
+
