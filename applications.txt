@@ -1,0 +1,67 @@
+total 40
+drwxrwxr-x+ 66 root     admin   2244 25 mai 16:26 .
+drwxrwxr-t  33 root     admin   1190 27 mai 17:59 ..
+-rw-r--r--@  1 yorrick  admin  15364  6 mai 17:50 .DS_Store
+-rw-r--r--   1 root     wheel      0  1 jul  2009 .localized
+drwxr-xr-x   3 root     wheel    102 16 oct  2011 Address Book.app
+drwxr-xr-x@  4 yorrick  admin    136 17 oct  2011 Adium.app
+drwxrwxr-x   3 root     admin    102 25 oct  2011 Adobe
+drwxrwxr-x   3 root     admin    102 23 mai 21:54 Adobe Reader.app
+drwxr-xr-x   3 root     wheel    102  7 nov  2011 App Store.app
+drwxr-xr-x   3 root     wheel    102 16 oct  2011 Automator.app
+drwxr-xr-x@  3 root     wheel    102 21 oct  2011 Balsamiq Mockups.app
+drwxr-xr-x   3 root     wheel    102 16 oct  2011 Calculator.app
+drwxr-xr-x   3 yorrick  staff    102 17 jan 13:17 Campfire.app
+drwxr-xr-x   3 root     wheel    102 19 mai  2009 Chess.app
+drwxr-xr-x   3 yorrick  admin    102 18 jan  2006 Chicken of the VNC.app
+drwxrwxr-x   3 yorrick  staff    102 16 mar  2011 CrashPlan.app
+drwxr-xr-x   3 root     wheel    102 16 oct  2011 DVD Player.app
+drwxr-xr-x   3 root     wheel    102 16 oct  2011 Dashboard.app
+drwxr-xr-x   3 yorrick  admin    102 16 sep  2011 DbVisualizer-8.0.4.app
+drwxr-xr-x   3 yorrick  admin    102  1 jul  2008 DeepVacuum.app
+drwxr-xr-x   3 root     wheel    102 16 oct  2011 Dictionary.app
+drwxr-xr-x   3 yorrick  admin    102 27 mar  2006 Disk Inventory X.app
+drwxr-xr-x@  3 yorrick  admin    102 14 fév 18:02 Dropbox.app
+drwxr-xr-x@  4 yorrick  admin    136 11 mai 08:10 Firefox.app
+drwxr-xr-x   3 yorrick  staff    102  5 jul  2011 Fluid.app
+drwxr-xr-x   3 root     wheel    102 16 oct  2011 Font Book.app
+drwxr-xr-x   3 root     wheel    102 16 oct  2011 Front Row.app
+drwxr-xr-x   3 yorrick  admin    102  9 mai 15:17 GitHub.app
+drwxrwxr-x@  3 yorrick  admin    102 22 mai 20:35 Google Chrome.app
+drwxr-xr-x   3 root     wheel    102 16 oct  2011 Image Capture.app
+drwxr-xr-x   3 yorrick  admin    102 29 mar  2010 KeePassX.app
+drwxr-xr-x   4 yorrick  admin    136 30 sep  2010 Kindle.app
+drwxr-xr-x   3 root     wheel    102 16 oct  2011 Mail.app
+lrwxr-xr-x   1 root     admin     92 14 mai 18:51 Microsoft Silverlight -> /Library/Internet Plug-Ins/Silverlight.plugin/Contents/Resources/Silverlight Preferences.app
+drwxr-xr-x@  3 yorrick  admin    102  7 nov  2011 OmniGraffle Professional 5.app
+drwxrwxr-x@  3 yorrick  admin    102 17 jan  2011 OpenOffice.org.app
+drwxr-xr-x@  3 yorrick  admin    102 26 mar 06:28 Opera.app
+drwxr-xr-x   3 root     wheel    102 16 oct  2011 Photo Booth.app
+drwxr-xr-x   7 root     admin    238 31 oct  2011 PostgreSQL 9.1
+drwxr-xr-x   3 root     wheel    102 16 oct  2011 Preview.app
+drwxr-xr-x   5 yorrick  admin    170  4 mai 14:43 Python 2.7
+drwxr-xr-x   3 root     wheel    102  7 nov  2011 QuickTime Player.app
+drwxr-xr-x   3 root     wheel    102  7 déc 13:41 Safari.app
+drwxr-xr-x   3 yorrick  staff    102 16 aoû  2011 SizeUp.app
+drwxr-xr-x   3 yorrick  admin    102 23 aoû  2011 Skype.app
+drwxr-xr-x   3 yorrick  admin    102  5 oct  2010 SourceTree.app
+drwxr-xr-x   3 root     wheel    102 19 mai  2009 Stickies.app
+drwxr-xr-x@  3 yorrick  admin    102 12 jan 00:18 Sublime Text 2.app
+drwxrwxr-x   3 root     wheel    102 16 oct  2011 System Preferences.app
+drwxr-xr-x   3 root     wheel    102 29 jui  2009 TextEdit.app
+drwxr-xr-x@  4 yorrick  admin    136 29 sep  2011 Thunderbird.app
+drwxr-xr-x   3 root     wheel    102 16 oct  2011 Time Machine.app
+drwxr-xr-x   3 root     admin    102 17 oct  2011 TotalTerminal.app
+drwxr-xr-x   3 yorrick  staff    102  3 avr  2011 Tunnelblick.app
+drwxrwxr-x+ 31 root     admin   1054 11 mai 08:09 Utilities
+drwxr-xr-x@  3 yorrick  admin    102 18 fév 13:24 VLC.app
+drwxr-xr-x   3 root     admin    102 28 mai 15:46 VirtualBox.app
+drwxr-xr-x  14 yorrick  admin    476  4 avr 17:14 WebScarab
+drwxrwxr-x   3 root     admin    102 15 fév 12:54 Wireshark.app
+drwxr-xr-x@ 14 yorrick  admin    476 27 mai 18:01 eclipse
+drwxr-xr-x   3 root     wheel    102 16 oct  2011 iCal.app
+drwxr-xr-x   3 root     wheel    102 16 oct  2011 iChat.app
+drwxr-xr-x   3 root     wheel    102 16 oct  2011 iSync.app
+drwxr-xr-x   3 yorrick  staff    102  3 fév 19:32 iTerm.app
+drwxr-xr-x   3 root     wheel    102  7 déc 13:41 iTunes.app
+drwxr-xr-x@  4 yorrick  staff    136 19 déc 09:24 talker.app
