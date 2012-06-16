@@ -42,7 +42,7 @@ deactivate () {
 # unset irrelavent variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/yorrick/virtualenvs/voiturolio"
+VIRTUAL_ENV="/Users/yorrick/virtualenvs/xwrap"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

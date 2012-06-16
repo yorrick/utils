@@ -42,7 +42,7 @@ deactivate () {
 # unset irrelavent variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/yorrick/virtualenvs/dealer-site"
+VIRTUAL_ENV="/Users/yorrick/virtualenvs/ttr"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
@@ -53,7 +53,6 @@ _OLD_PYTHON_PATH="$PYTHONPATH"
 PYTHONPATH=~/Work/
 PYTHONPATH=$PYTHONPATH:~/virtualenvs/django14/
 PYTHONPATH=$PYTHONPATH:$WORKDIR/xt
-PYTHONPATH=$PYTHONPATH:$WORKDIR/voiturolio
 export PYTHONPATH
 
 # unset PYTHONHOME if set
@@ -67,7 +66,7 @@ fi
 if [ -z "$VIRTUAL_ENV_DISABLE_PROMPT" ] ; then
     _OLD_VIRTUAL_PS1="$PS1"
     if [ "x" != x ] ; then
-	PS1="$PS1"
+        PS1="$PS1"
     else
     if [ "`basename \"$VIRTUAL_ENV\"`" = "__" ] ; then
         # special case for Aspen magic directories
