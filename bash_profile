@@ -10,7 +10,7 @@ PATH=/usr/local/bin:$PATH
 export PATH
 
 # work
-WORKDIR=~/Work
+WORKDIR=~/work
 export WORKDIR
 
 # python path
