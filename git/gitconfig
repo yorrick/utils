@@ -20,3 +20,6 @@
 	br = branch
 	br = branch -v
 	last = log -1 HEAD
+	ou = log origin..HEAD
+	in = log HEAD..origin
+
