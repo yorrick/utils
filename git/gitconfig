@@ -23,3 +23,6 @@
 	ou = log origin..HEAD
 	in = log HEAD..origin
 
+[color]
+        ui = auto
+
