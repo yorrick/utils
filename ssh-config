@@ -4,7 +4,7 @@ Host github.com
 
 
 Host vserver.auto
-	IdentityFile ~/.ssh/id_rsa
+	IdentityFile ~/.ssh/vserver_rsa
 
 Host mtlserverolio
     Port 42022
@@ -19,7 +19,7 @@ Host mtlserveroliohg
     Port 42022
     Hostname mtlserverolio.dyndns.org
     User www-data
-    IdentityFile ~/.ssh/id_rsa 
+    IdentityFile ~/.ssh/vserver_rsa 
     ServerAliveInterval 60
 
 Host lavalservers
