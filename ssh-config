@@ -2,24 +2,16 @@ Host github.com
 	IdentityFile ~/.ssh/id_rsa_github
     User git   
 
-
 Host vserver.auto
-	IdentityFile ~/.ssh/vserver_rsa
+    Port 2323
+    IdentityFile ~/.ssh/cloud_rsa
 
 Host mtlserverolio
-    Port 42022
-    Hostname mtlserverolio.dyndns.org
-    User yorrick
+    Port 2323
+    IdentityFile ~/.ssh/cloud_rsa
+    Hostname 24.37.79.54
     LocalForward 5433 localhost:5432
-    LocalForward 6667 localhost:6667
     LocalForward 8001 localhost:80
-    ServerAliveInterval 60
-
-Host mtlserveroliohg
-    Port 42022
-    Hostname mtlserverolio.dyndns.org
-    User www-data
-    IdentityFile ~/.ssh/vserver_rsa 
     ServerAliveInterval 60
 
 Host lavalservers

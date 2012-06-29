@@ -8,12 +8,12 @@
 255.255.255.255	broadcasthost
 ::1             localhost 
 fe80::1%lo0	localhost
-192.168.1.66    vserver.auto
-192.168.1.66    doc.vserver.auto
-192.168.1.66    cov.vserver.auto
-192.168.1.66    daily.vserver.auto
-192.168.1.66    dailydoc.vserver.auto
-192.168.1.66    dailycov.vserver.auto
-192.168.1.66    hg.vserver.auto
-192.168.1.66    devkiachom.vserver.auto
+192.168.1.67    vserver.auto
+192.168.1.67    doc.vserver.auto
+192.168.1.67    cov.vserver.auto
+192.168.1.67    daily.vserver.auto
+192.168.1.67    dailydoc.vserver.auto
+192.168.1.67    dailycov.vserver.auto
+192.168.1.67    hg.vserver.auto
+192.168.1.67    devkiachom.vserver.auto
 # 127.0.0.1       devkiachom.vserver.auto
