@@ -69,7 +69,17 @@ function git_since_last_commit {
     echo "${hours_since_last_commit}h${minutes_since_last_commit}m ";
 }
 
-PS1="[\[\033[1;32m\]\w\[\033[0m\]]\[\033[0m\]\[\033[1;36m\]\$(git_branch)\[\033[0;33m\]\$(git_since_last_commit)\[\033[0m\]$ "
+WHITE="\[\033[0m\]"
+GREEN="\[\033[0;32m\]"
+CYAN="\[\033[0;36m\]"
+GRAY="\[\033[0;37m\]"
+BLUE="\[\033[0;34m\]"
+YELLOW="\[\033[0;33m\]"
+# export PS1="{GREEN}\u${CYAN}@${BLUE}\h ${CYAN}\w $(__git_ps1 '(%s)') ${GRAY}$ "
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+
+PS1="[${GREEN}\w${WHITE}]${CYAN}\$(__git_ps1)${YELLOW} \$(git_since_last_commit)${WHITE}$ "
 
 source ~/.django_bash_completion.bash
 
