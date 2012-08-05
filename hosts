@@ -21,5 +21,5 @@ fe80::1%lo0	localhost
 64.34.80.163    xprima.fogbugz.com
 64.34.80.164    fogbugz.com
 
-raspberrypi    192.168.1.200
+192.168.1.200   raspberrypi 
 
