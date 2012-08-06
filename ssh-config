@@ -1,5 +1,5 @@
 Host github.com
-	IdentityFile ~/.ssh/id_rsa_github
+	IdentityFile ~/.ssh/github_shell_rsa
     User git   
 
 Host vserver.auto
