@@ -26,5 +26,7 @@
 [color]
         ui = auto
 
-[diff "podiff"]
-    textconv = "grep -v '^#:'"
+[merge "pofile"]
+    name = Gettext merge driver
+    driver = git merge-po %O %A %B
+
