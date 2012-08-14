@@ -1,4 +1,6 @@
-ustom Git merge driver - merges PO files using msgcat(1)
+#!/bin/sh
+#
+# Custom Git merge driver - merges PO files using msgcat(1)
 #
 # - Install gettext
 #
@@ -17,8 +19,6 @@ ustom Git merge driver - merges PO files using msgcat(1)
 #
 # - When merging branches, conflicts in PO files will be maked with "#-#-#-#"
 # 
-
-
 O=$1
 A=$2
 B=$3
@@ -41,4 +41,3 @@ rm $header $temp
 conflicts=$(grep -c "#-#" $A)
 test $conflicts -gt 0 && exit 1
 exit 0
-
