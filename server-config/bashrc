@@ -1,0 +1,25 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
+# User specific aliases and functions
+if [ -z "$STARTED_SCREEN" ] && [ -n "$SSH_TTY" ]
+then
+  case $- in
+    (*i*)
+      STARTED_SCREEN=1; export STARTED_SCREEN
+      mkdir -p -- "$HOME/lib/screen-logs"
+      screen -RR -S main  ||
+        echo "Screen failed! continuing with normal bash startup"
+  esac
+fi
+
+BLUE="\[\033[0;34m\]"
+WHITE="\[\033[0m\]"
+GREEN="\[\033[0;32m\]"
+CYAN="\[\033[0;36m\]"
+PS1="(\u@\h) [$GREEN\w$WHITE] (${CYAN}$STY${WHITE}:${CYAN}$WINDOW${WHITE}) $ "
+
