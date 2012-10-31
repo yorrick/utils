@@ -18,6 +18,11 @@ Host lavalservers
    Hostname 192.168.99.7
    LocalForward 6435 192.168.0.72:5432
 
+Host dev.webdees
+   Hostname dev.webdees.xprima.com
+   User yjansen
+   IdentityFile ~/.ssh/dev.webdees_rsa
+
 Host tools1
    Port 2323
    Hostname tools1.mtlevolio.com

@@ -6,7 +6,7 @@ export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
 # makes brew installed software before others
-PATH=/usr/local/bin:$PATH
+PATH=/usr/local/bin:/usr/local/sbin/:$PATH
 export PATH
 
 # work
