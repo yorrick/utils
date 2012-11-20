@@ -23,6 +23,21 @@ Host dev.webdees
    User yjansen
    IdentityFile ~/.ssh/dev.webdees_rsa
 
+Host router
+   Port 50022
+   Hostname yorrick.dlinkddns.com
+   User root
+   IdentityFile ~/.ssh/router_rsa
+   LocalForward 9000 localhost:80
+   LocalForward 9001 192.168.2.110:80
+   LocalForward 9002 192.168.2.2:22
+
+Host raspberrypi
+   Port 9002
+   Hostname localhost
+   User yorrick
+   IdentityFile ~/.ssh/raspberrypi_rsa
+
 Host tools1
    Port 2323
    Hostname tools1.mtlevolio.com
