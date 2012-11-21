@@ -83,3 +83,9 @@ PS1="[${GREEN}\w${WHITE}]${CYAN}\$(__git_ps1)${YELLOW} \$(git_since_last_commit)
 
 source ~/.django_bash_completion.bash
 
+
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+bind '"\e[C": forward-char'
+bind '"\e[D": backward-char'
+
