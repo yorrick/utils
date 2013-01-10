@@ -18,8 +18,8 @@ fe80::1%lo0	localhost
 192.168.1.67    devkiachom.vserver.auto
 # 127.0.0.1       devkiachom.vserver.auto
 
-64.34.80.163    xprima.fogbugz.com
-64.34.80.164    fogbugz.com
+#64.34.80.163    xprima.fogbugz.com
+#64.34.80.164    fogbugz.com
 
 # 127.0.0.1    devttr.mtl.auto
 

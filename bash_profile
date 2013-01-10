@@ -22,6 +22,8 @@ export WORKDIR
 
 # aliases
 alias ll='ls -lisah'
+alias l='git status'
+alias d='git diff'
 alias cleanpyc='find . -type f -name "*.pyc" -exec rm -f {} \;'
 # alias ls='ls $LS_OPTIONS -hF'
 # alias ll='ls $LS_OPTIONS -lAhF'
