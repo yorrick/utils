@@ -9,6 +9,8 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 PATH=/usr/local/bin:/usr/local/sbin/:$PATH
 export PATH
 
+export CDPATH=~/work/
+
 # work
 WORKDIR=~/work
 export WORKDIR
@@ -22,7 +24,7 @@ export WORKDIR
 
 # aliases
 alias ll='ls -lisah'
-alias l='git status'
+alias s='git status'
 alias d='git diff'
 alias cleanpyc='find . -type f -name "*.pyc" -exec rm -f {} \;'
 # alias ls='ls $LS_OPTIONS -hF'
