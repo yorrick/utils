@@ -86,6 +86,7 @@ GIT_PS1_SHOWUNTRACKEDFILES=true
 PS1="[${GREEN}\w${WHITE}]${CYAN}\$(__git_ps1)${YELLOW} \$(git_since_last_commit)${WHITE}$ "
 
 source ~/.django_bash_completion.bash
+source ~/.VBoxManage_completion.bash
 
 
 bind '"\e[A": history-search-backward'
