@@ -5,10 +5,6 @@ Host github.com
 Host vserver.auto
     Port 2323
     IdentityFile ~/.ssh/cloud_rsa
-
-Host mtlserverolio
-    Port 2323
-    IdentityFile ~/.ssh/cloud_rsa
     Hostname 24.37.79.54
     LocalForward 5433 localhost:5432
     LocalForward 8001 localhost:80
