@@ -6,9 +6,6 @@ from fabric.contrib.console import confirm
 import os
 
 
-#env.key_filename = '~/.ssh/id_rsa'
-#devserver = 'yorrick@mtlserverolio.dyndns.org:42022'
-
 dbdump_dir = 'dbdump'
 
 
@@ -18,7 +15,7 @@ def copy():
         local('rm -rf ~/.Trash/{0}.old/'.format(dbdump_dir))
         local('mv -f ~/{0}.old ~/.Trash/'.format(dbdump_dir))
         local('mv ~/{0} ~/{0}.old'.format(dbdump_dir))
-        local('scp -r yorrick@mtlserverolio:/srv/dbbackup/{0}/ ~'.format(dbdump_dir))
+        local('scp -r yorrick@vserver.auto:/srv/dbbackup/{0}/ ~'.format(dbdump_dir))
 
 
 
