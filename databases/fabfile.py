@@ -4,8 +4,10 @@ from fabric.api import env, cd, hosts, settings, execute, local, task,\
     parallel, sudo
 from fabric.contrib.console import confirm
 import os
+import psycopg2
 
 
+user, password = 'dev', 'dev'
 dbdump_dir = 'dbdump'
 
 
@@ -48,6 +50,34 @@ def restore(db):
 
 
 @task
+def vacuum(db=None):
+    if db and db not in databases:
+        raise Exception('Unknow db {0}'.format(db))
+
+    if not db:
+        all_dbs = get_databases()
+        if not confirm('Vacuum all DBs? ({0})'.format(', '.join(all_dbs)), default=False):
+            return
+    else:
+        all_dbs = [db]
+
+    for db in all_dbs:
+        try:
+            conn = psycopg2.connect(database=db, user=user, password=password)
+            print 'Executing vacuum on DB {0}'.format(db)
+            try:
+                conn.set_isolation_level(0)
+                cur = conn.cursor()
+                cur.execute('vacuum full')
+            finally:
+                cur.close()
+
+            conn.close()
+        except Exception as e:
+            pass
+
+
+@task
 def stop():
     local('sudo -u yorrick pg_ctl -D ~/postgres-data/ stop -m immediate')
 
@@ -55,10 +85,6 @@ def stop():
 @task
 def start():
     local('sudo -u yorrick pg_ctl -D ~/postgres-data/ -l ~/postgres-data/server.log start')
-
-
-user, password = 'dev', 'dev'
-import psycopg2
 
 
 def get_databases():
