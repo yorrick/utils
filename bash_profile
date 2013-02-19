@@ -88,6 +88,7 @@ PS1="[${GREEN}\w${WHITE}]${CYAN}\$(__git_ps1)${YELLOW} \$(git_since_last_commit)
 source ~/.django_bash_completion.bash
 source ~/.VBoxManage_completion.bash
 source ~/.vagrant_completion.bash
+source ~/.fabric_completion.bash
 
 
 bind '"\e[A": history-search-backward'
