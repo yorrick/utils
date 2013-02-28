@@ -23,10 +23,16 @@ export WORKDIR
 # export PYTHONPATH
 
 # aliases
+
+ack_history() {
+  ack -h "$1" ~/.bash-history-*
+}
+
 alias ll='ls -lisah'
 alias s='git status'
 alias d='git diff'
 alias cleanpyc='find . -type f -name "*.pyc" -exec rm -f {} \;'
+alias ahis=ack_history
 # alias ls='ls $LS_OPTIONS -hF'
 # alias ll='ls $LS_OPTIONS -lAhF'
 # alias cdwork='cd $WORKDIR'
