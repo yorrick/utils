@@ -180,7 +180,7 @@ def value_lookup(connection, value):
                 for column in columns:
                     try:
                         table_cur = connection.cursor()
-                        query = 'SELECT count(*) FROM %s.%s WHERE "%s" LIKE ' % (schema, table, column) + '%s'
+                        query = 'SELECT count(*) FROM %s.%s WHERE "%s" ILIKE ' % (schema, table, column) + '%s'
                         table_cur.execute(query, ('%%%s%%' % value.lower(), ))
                         count = table_cur.fetchone()[0]
                         if count > 0:
@@ -195,11 +195,13 @@ def value_lookup(connection, value):
         cur.close()
 
 @task
-def lookup(table='', column='', value=''):
+def lookup(table='', column='', value='', database=''):
     if bool(table) == bool(column) == bool(value):
         raise Exception('Please specify one of "table" or "column" or "value"')
 
-    for db in get_databases():
+    databases = get_databases() if not database else [database]
+
+    for db in databases:
         print db
         try:
             conn = psycopg2.connect(host='localhost', port='5432', database=db, user=user, password=password)

@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# dev current from inside
+curl http://devapi.mtl.auto/en/promos/oem/all_makes/on/
+curl http://devapi.mtl.auto/en/promos/house/on/
+
+# dev current from outside (with auth)
+curl -u voiturolio-dev:F557Gj4_CiqggYU1apbVAfw9 http://devapi.mtlevolio.com/en/promos/oem/all_makes/on/
+curl -u voiturolio-dev:F557Gj4_CiqggYU1apbVAfw9 http://devapi.mtlevolio.com/en/promos/house/on/
+
+# dev stable from inside
+curl http://api.mtl.auto/en/promos/oem/all_makes/on/
+curl http://api.mtl.auto/en/promos/house/on/
+
+# dev current from outside (with auth)
+curl -u voiturolio-dev:F557Gj4_CiqggYU1apbVAfw9 http://api.mtl.auto/en/promos/oem/all_makes/on/
+curl -u voiturolio-dev:F557Gj4_CiqggYU1apbVAfw9 http://api.mtlevolio.com/en/promos/house/on/ FAIL
+
+# staging
+curl -u voiturolio-dev:2I5OlwMdj2RBRAdGIE0h8_iW http://stagapi.mtlevolio.com/en/promos/oem/all_makes/on/
+curl -u voiturolio-dev:2I5OlwMdj2RBRAdGIE0h8_iW http://stagapi.mtlevolio.com/en/promos/house/on/
+
+# prod
+curl -u voiturolio-dev:2I5OlwMdj2RBRAdGIE0h8_iW http://api.mtlevolio.com/en/promos/oem/all_makes/on/
+curl -u voiturolio-dev:2I5OlwMdj2RBRAdGIE0h8_iW http://api.mtlevolio.com/en/promos/house/on/
