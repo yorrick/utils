@@ -7,7 +7,7 @@ Host vserver.auto
     IdentityFile ~/.ssh/cloud_rsa
     Hostname 24.37.79.54
     LocalForward 5433 localhost:5432
-    LocalForward 8001 localhost:80
+#    LocalForward 8001 localhost:80
     ServerAliveInterval 60
 
 Host lavalservers

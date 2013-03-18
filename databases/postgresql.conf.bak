@@ -117,7 +117,7 @@ max_connections = 100			# (change requires restart)
 
 
 
-shared_buffers = 1024MB			# min 128kB
+shared_buffers = 2048MB			# min 128kB
 					# (change requires restart)
 #temp_buffers = 8MB			# min 800kB
 #max_prepared_transactions = 0		# zero disables the feature
