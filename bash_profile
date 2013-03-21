@@ -9,7 +9,7 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 PATH=/usr/local/bin:/usr/local/sbin/:$PATH
 export PATH
 
-export CDPATH=~/work/
+export CDPATH=.:~:~/work/
 
 # work
 WORKDIR=~/work
