@@ -39,7 +39,10 @@ databases = {
 def restore(db):
     if db not in databases:
         raise Exception('Unknow db {0}'.format(db))
-    local(DROP_STRING.format(db))
+
+    with settings(warn_only=True):
+        local(DROP_STRING.format(db))
+
     local(CREATE_STRING.format(db))
 
     for path in databases[db]:
