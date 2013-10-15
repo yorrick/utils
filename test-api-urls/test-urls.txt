@@ -14,7 +14,7 @@ curl http://api.mtl.auto/en/promos/house/on/
 
 # dev current from outside (with auth)
 curl -u voiturolio-dev:F557Gj4_CiqggYU1apbVAfw9 http://api.mtl.auto/en/promos/oem/all_makes/on/
-curl -u voiturolio-dev:F557Gj4_CiqggYU1apbVAfw9 http://api.mtlevolio.com/en/promos/house/on/ FAIL
+curl -u voiturolio-dev:F557Gj4_CiqggYU1apbVAfw9 http://api.mtlevolio.com/en/promos/house/on/
 
 # staging
 curl -u voiturolio-dev:2I5OlwMdj2RBRAdGIE0h8_iW http://stagapi.mtlevolio.com/en/promos/oem/all_makes/on/

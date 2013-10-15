@@ -1,5 +1,5 @@
 .idea
-.swp
+*.swp
 .pyc
 .fab_tasks~
 
