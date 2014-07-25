@@ -15,10 +15,10 @@ dbdump_dir = 'dbdump'
 def copy():
     with settings(warn_only=True):
         local('rm -rf ~/.Trash/{0}.old/'.format(dbdump_dir))
-        local('mv -f ~/{0}.old ~/.Trash/'.format(dbdump_dir))
-        local('mv ~/{0} ~/{0}.old'.format(dbdump_dir))
-        local('scp -r yorrick@vserver.auto:/srv/dbbackup/{0}/ ~'.format(dbdump_dir))
-
+        local('mv -f ~/{0}.old ~/.Trash/; exit 0;'.format(dbdump_dir))
+        local('mv ~/{0} ~/{0}.old; exit 0;'.format(dbdump_dir))
+#        local('scp -r yorrick@vserver.auto:/srv/dbbackup/{0}/ ~'.format(dbdump_dir))
+        local('rsync -d --progress --delete --include="*.backup" -e ssh "vserver.auto:/srv/dbbackup/dbdump/*" ~/{0}'.format(dbdump_dir))
 
 
 RESTAURE_STRING = 'pg_restore --host localhost --port 5432 --username "dev" --dbname "{0}" --no-password  --no-owner --no-privileges --verbose {1} > /dev/null 2>&1'
@@ -33,6 +33,7 @@ databases = {
     'news': ('news.backup', ),
     'resolio': ('resolio.backup', ),
     'usedindex': ('usedindex.backup', ),
+    'nciwork': ('nciwork.backup', ),
 }
 
 @task

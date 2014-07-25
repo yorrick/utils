@@ -7,6 +7,10 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 
 # makes brew installed software before others
 PATH=/usr/local/bin:/usr/local/sbin/:$PATH
+
+# makes ruby installed by brew before others
+PATH=/usr/local/Cellar/ruby/2.1.2_2/bin/:$PATH
+
 export PATH
 
 export CDPATH=.:~:~/work/
@@ -31,6 +35,7 @@ ack_history() {
 alias ll='ls -lisah'
 alias s='git status'
 alias d='git diff'
+alias a='git add .'
 alias cleanpyc='find . -type f -name "*.pyc" -exec rm -f {} \;'
 alias ahis=ack_history
 # alias ls='ls $LS_OPTIONS -hF'
@@ -59,6 +64,10 @@ fi
 
 # Git completion
 source ~/.git-completion.bash
+
+# docker completion
+source ~/.docker_completion.bash
+
 
 # nice git tips in PS1
 # https://gist.github.com/921364
@@ -102,3 +111,11 @@ bind '"\e[B": history-search-forward'
 bind '"\e[C": forward-char'
 bind '"\e[D": backward-char'
 
+
+# SBT configuration
+export SBT_OPTS="-Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256m"
+
+
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
